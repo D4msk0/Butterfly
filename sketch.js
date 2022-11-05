@@ -1,7 +1,7 @@
 var yoff = 0;
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(1500, 1500);
 }
 
 function draw(){
@@ -14,14 +14,14 @@ function draw(){
   strokeWeight(1);
   fill(255, 50);
   var xoff = 0;
-  var dx = 0.1;
+  var dx = 0.8;
   var da = PI/100;
   
   beginShape();
   for (var a = -PI / 2; a < PI / 2; a += da) {
     
     var n = noise(xoff, yoff);
-    var r = sin(2 * a) * map(n, 0, 1, 50, 125);
+    var r = sin(2 * a) * map(n, 0, 1, 250, 500);
 
     var x = r * cos(a);
     var y = r * sin(a);
@@ -31,7 +31,7 @@ function draw(){
   for (var a = PI / 2; a <= 3*PI/2; a += da) {
     
     var n = noise(xoff, yoff);
-    var r = sin(2 * a) * map(n, 0, 1, 50, 125);
+    var r = sin(2 * a) * map(n, 0, 1, 250, 500);
 
     var x = r * cos(a);
     var y = r * sin(a);
@@ -39,5 +39,5 @@ function draw(){
     vertex(x,y);
   }
   endShape();
-  yoff += 0.1;
+  yoff += 0.01;
 }
