@@ -1,7 +1,7 @@
 var yoff = 0;
 
 function setup() {
-  createCanvas(1500, 1500);
+  createCanvas(600, 600);
 }
 
 function draw(){
@@ -21,7 +21,7 @@ function draw(){
   for (var a = -PI / 2; a < PI / 2; a += da) {
     
     var n = noise(xoff, yoff);
-    var r = sin(2 * a) * map(n, 0, 1, 250, 500);
+    var r = sin(2 * a) * map(n, 0, 1, 150, 300);
 
     var x = r * cos(a);
     var y = r * sin(a);
@@ -31,7 +31,7 @@ function draw(){
   for (var a = PI / 2; a <= 3*PI/2; a += da) {
     
     var n = noise(xoff, yoff);
-    var r = sin(2 * a) * map(n, 0, 1, 250, 500);
+    var r = sin(2 * a) * map(n, 0, 1, 150, 300);
 
     var x = r * cos(a);
     var y = r * sin(a);
